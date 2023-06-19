@@ -22,25 +22,15 @@ const About = () => {
               alt="Image"
             />
             <Typography>Prasad Iyer</Typography>
-            <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
-            </Button>
+            <a href="prasad-iyer.onrender.com">Visit Portfolio</a>
             <span>
               This is a sample wesbite made by Prasad.
             </span>
           </div>
           <div className="aboutSectionContainer2">
-            <Typography component="h2">Our Brands</Typography>
-            <a
-              href=""
-              target="blank"
-            >
-              <YouTubeIcon className="youtubeSvgIcon" />
-            </a>
-
-            <a href="" target="blank">
-              <InstagramIcon className="instagramSvgIcon" />
-            </a>
+            <Typography component="h2">Contact</Typography>
+            <h2>Email: prasadiyer25@gmail.com</h2>
+            <h2>Phone no: 8779849708</h2>
           </div>
         </div>
       </div>

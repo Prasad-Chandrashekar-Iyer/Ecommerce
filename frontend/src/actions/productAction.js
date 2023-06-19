@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createProxyMiddleware } from 'http-proxy-middleware';
+
 
 import {
   ALL_PRODUCT_FAIL,
@@ -39,7 +39,13 @@ export const getProduct =
     try {
       
 
+// Create a proxy instance
 
+// Apply the proxy to the axios instance
+// Set your API base URL
+
+
+// Add a request interceptor to apply the proxy middleware
 
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
@@ -50,12 +56,7 @@ export const getProduct =
         link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
       
-      const { data } = await axios.get(link,{
-        proxy:{
-          protocol:'https',
-          host:'ecommerce-backend-yqe8.onrender.com'
-        },
-      });
+      const { data } = await axios.get(link);
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
